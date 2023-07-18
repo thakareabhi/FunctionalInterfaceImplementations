@@ -3,13 +3,16 @@ package org.supplier;
 import org.example.PeopleDetails;
 
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.random.RandomGenerator;
 
 public class InterfaceCaller {
 
     public static void main(String args[]){
 
         SupplierInterface<Integer> supplierInterface=()->{
-          return 100;
+          Random r=new Random();
+          return r.nextInt();
         };
 
         ArrayList<PeopleDetails> newList=new ArrayList<>();
