@@ -26,6 +26,10 @@ public class InterfaceCaller {
         newList.add(peopleDetails2);
         newList.add(peopleDetails3);
 
-        newList.forEach(p->predicateInterface.checkAge(p));
+        newList.forEach(  pDetails -> {if(predicateInterface.checkAge(pDetails)){
+                System.out.println("Grant Access ticket");
+        }else {
+            System.out.println("Reject Access ticket");
+        }});
     }
 }
